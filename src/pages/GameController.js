@@ -89,7 +89,8 @@ export default function GameController() {
 
             console.log("request to join the game sent, data: " + viewByteArray);
         };
-    }, [])
+        // eslint-disable-next-line
+    }, [gameId])
 
     useEffect(() => {
         if(player === 0) {
