@@ -155,14 +155,15 @@ export default function GameController() {
                         <div>
                             <Button onTouchStart={() => handleEvent(player, 4, 1, gameId, ws)}
                                     onTouchEnd={() => handleEvent(player, 4, 0, gameId, ws)}>✴</Button>
-                            <Button onTouchStart={() => handleEvent(player, 2, 1, gameId, ws)}
-                                    onTouchEnd={() => handleEvent(player, 2, 0, gameId, ws)}>←</Button>
+                            
+                            <Button onTouchStart={() => handleEvent(player, 0, 1, gameId, ws)}
+                                    onTouchEnd={() => handleEvent(player, 0, 0, gameId, ws)}>↓</Button>
                         </div>
 
 
                         <div>
-                            <Button onTouchStart={() => handleEvent(player, 0, 1, gameId, ws)}
-                                    onTouchEnd={() => handleEvent(player, 0, 0, gameId, ws)}>↓</Button>
+                            <Button onTouchStart={() => handleEvent(player, 2, 1, gameId, ws)}
+                                    onTouchEnd={() => handleEvent(player, 2, 0, gameId, ws)}>←</Button>
 
                             <Button onTouchStart={() => handleEvent(player, 4, 1, gameId, ws)}
                                     onTouchEnd={() => handleEvent(player, 4, 0, gameId, ws)}>✴</Button>
