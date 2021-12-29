@@ -92,14 +92,6 @@ export default function GameController() {
         // eslint-disable-next-line
     }, [gameId])
 
-    useEffect(() => {
-        if(player === 0) {
-            setAlert(true);
-        } else {
-            setAlert(false);
-        }
-    }, [player])
-
     ws.onmessage = (message) => {
         if (message.data[1] !== 0) {
             player = message.data[1];
@@ -112,6 +104,7 @@ export default function GameController() {
     }
 
     function handleEvent(playerId, buttonId, commandId, gameId, ws) {
+        console.log("player je ", playerId);
         if (player !== 0) {
             let data = [1, playerId, buttonId, commandId, gameId.charCodeAt(0), gameId.charCodeAt(1), gameId.charCodeAt(2), gameId.charCodeAt(3)];
             let viewByteArray = new Uint8Array(data);
